@@ -2,6 +2,8 @@
 Wrap is a 2D platformer in which the world infinitely wraps around itself!
 It has normal platformer controls, and the only thing to do is... Get to the end of the level!
 
+![Front Pic](/Front ic.png?raw=true "Front Pic")
+
 -----
 ## Known Bugs / Glitches
 * The enemy collision detection (for killing them) sucks, but I'm too busy on other projects to fix it. :(
