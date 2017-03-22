@@ -1,0 +1,1 @@
+\t\tfor(var count1 = 0; count1 < blocks.length; count1++) {\r\n\t\t\t\r\n\t\t\tfor(var count2 = 0; count2 < blocks[count1].collisions.length; count2++) {\r\n\t\t\t\t\r\n\t\t\t\tif(this.collision.collide(blocks[count1].collisions[count2])) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tthis.touching_world = true;\r\n\t\t\t\t\t\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t}

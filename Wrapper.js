@@ -42,7 +42,7 @@ class Wrapper {
     
     for(var count1 = 0; count1 < command.length; count1++) {
       
-      if(command[count1] == "_") {
+      if(command[count1] == "@") {
         
         found_pair = true;
         break;
