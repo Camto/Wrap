@@ -21,8 +21,6 @@ class Horiz_Moving_Platform {
 		this.x = x;
 		this.y = y;
 		
-		this.xv = 0;
-		
 	}
 	
 	update() {
@@ -98,7 +96,7 @@ class Horiz_Moving_Platform {
 		
 		switch(attribute) {
 			
-			case "direction": this.xv = (((parens_nums[0][0] * 2) - 1) * 2); break;
+			case "direction": this.xv = ((parens_nums[0][0] * 2) - 1); break;
 			
 			case "patrol_lines":
 				
@@ -160,8 +158,6 @@ class Vert_Moving_Platform {
 		
 		this.x = x;
 		this.y = y;
-		
-		this.yv = 0;
 		
 	}
 	
@@ -238,7 +234,7 @@ class Vert_Moving_Platform {
 		
 		switch(attribute) {
 			
-			case "direction": this.yv = (((parens_nums[0][0] * 2) - 1) * 2); break;
+			case "direction": this.yv = ((parens_nums[0][0] * 2) - 1); break;
 			
 			case "patrol_lines":
 				

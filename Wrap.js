@@ -78,6 +78,7 @@ function init(in_debug) {
 	end = new Goal(0, 0);
 	monsters = [];
 	blocks = [];
+	lava_blocks = [];
 	barriers = [];
 	moving_platforms = [];
 	
@@ -274,7 +275,13 @@ function init(in_debug) {
 			"                    ",
 			"                    "
 			
-		])
+		], new Wrapper(
+			
+			`
+			Moving_Platform0 @direction: (0)|
+			`
+			
+		))
 			
 	];
 	
@@ -329,6 +336,11 @@ function game() {
 		for(count = 0; count < blocks.length; count++) {
 			
 			blocks[count].draw();
+			
+		}
+		for(count = 0; count < lava_blocks.length; count++) {
+			
+			lava_blocks[count].draw();
 			
 		}
 		

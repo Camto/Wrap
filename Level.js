@@ -25,7 +25,9 @@ class Level {
 		
 		monsters = [];
 		blocks = [];
+		lava_blocks = [];
 		barriers = [];
+		moving_platforms = [];
 		
 		for(var y = 0; y < this.game_components.length; y++) {
 			
@@ -48,7 +50,9 @@ class Level {
 					case "-": moving_platforms.push(new Horiz_Moving_Platform(x * 20, y * 20)); break;
 					
 					case "|": moving_platforms.push(new Vert_Moving_Platform(x * 20, y * 20)); break;
-			
+					
+					case "!": lava_blocks.push(new Lava(x * 20, y * 20)); break;
+					
 				}
 				
 			}

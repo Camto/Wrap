@@ -96,6 +96,26 @@ class Player {
 		this.x += this.xv;
 		
 		this.collision = new Collision(this.x, this.y, 18, 18);
+		
+		for(var count1 = 0; count1 < lava_blocks.length; count1++) {
+			
+			for(var count2 = 0; count2 < lava_blocks[count1].collisions.length; count2++) {
+				
+				if(this.collision.collide(lava_blocks[count1].collisions[count2])) {
+					
+					level--;
+					next_level();
+					
+					// levels[level - 1].load_level(); // restart level without title screen, bad choice, the player (could) need a break (maybe they missed the message, maybe they're stressed, who knows).
+					
+					return 1;
+					
+				}
+				
+			}
+			
+		}
+		
 		this.touching_world = false;
 		
 		for(var count1 = 0; count1 < blocks.length; count1++) {
@@ -133,6 +153,26 @@ class Player {
 		this.y += this.yv;
 		
 		this.collision = new Collision(this.x, this.y, 18, 18);
+		
+		for(var count1 = 0; count1 < lava_blocks.length; count1++) {
+			
+			for(var count2 = 0; count2 < lava_blocks[count1].collisions.length; count2++) {
+				
+				if(this.collision.collide(lava_blocks[count1].collisions[count2])) {
+					
+					level--;
+					next_level();
+					
+					// levels[level - 1].load_level(); // restart level without title screen, bad choice, the player (could) need a break (maybe they missed the message, maybe they're stressed, who knows).
+					
+					return 1;
+					
+				}
+				
+			}
+			
+		}
+		
 		this.touching_world = false;
 		
 		for(var count1 = 0; count1 < blocks.length; count1++) {
